@@ -12,6 +12,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Production",
+      template: "./src/index.html",
     }),
   ],
   output: {
@@ -22,8 +23,8 @@ export default {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["css-loader"],
+        test: /\.html$/i,
+        use: ["html-loader"],
       },
     ],
   },
